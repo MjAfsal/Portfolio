@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afsal's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/98b21c3ef6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logoimg.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Undergraduate Software Engineer</p>
+                <h1>Hi, I'm <span>Afsal</span></h1>
+            </div>
+        </div>
+    </div>
+<!-- -----------------ABOUT--------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/bg.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1> <br>
+                    <p>I'm Afsal Jeelan, an undergraduate student in Software Engineering. I've
+                    completed a Higher National Diploma program and have a strong passion
+                    for research and development in this field. Despite past challenges, I'm
+                    committed to continuous personal growth. My foundation in software
+                    engineering and dedication to research and development drive me to excel
+                    in any project or team setting.</p>
+
+                    <div class="Tab-Titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links"onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experiance')">Experiance</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>Degree (Reading).</span><br>Bsc(Hons)in Sofware Engineering (Solent University Southampton).</li> <br>
+                            <li><span>Higher National Diploma.</span><br>Successfully Completed BTECH Higher National Diploma <br>in Sofware Engineering(Pearson Education).</li> <br>
+                            <li><span>Advanced Level.</span><br>Successfully Completed With Simple Passes.</li> <br>
+                            <li><span>Ordinary Level.</span><br>Successfully Completed With A and C Passes.</li> <br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Web Technologies</span><br>HTML | CSS | JS | PHP | MySQL</li> <br>
+                            <li><span>Programming Languages.</span><br>JAVA | PYTHON .</li> <br>
+                            <li><span>Frameworks.</span><br>SPRINGBOOT | REACT | BOOSTRAP | UiKIT.</li> <br>
+                            <li><span>Data Science.</span><br> Matplotlib | Pandas | Seaborn | NumPy | Scikit-learn</li> <br>
+                            <li><span>Machine Learning.</span><br>Matplotlib | Pandas | Seaborn | NumPy | Scikit-learn</li> <br>
+                            <li><span>DevOps.</span><br>AWS | EC2 | ECS | Docker | Jenkins</li> <br>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiance">
+                        <ul>
+                            <li><span>No Indrustrial Experiences Yet.</span><br></li> <br>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-brands fa-web-awesome"></i>
+                        <h2>Web Development</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum numquam dolore magni molestias quae aperiam, blanditiis culpa odit enim hic?</p>
+                        <a href="#">LearnMore</a>
+                    </div>
+                     <div>
+                        <i class="fa-brands fa-app-store-ios"></i>
+                        <h2>Application Development</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil adipisci consequuntur voluptate pariatur explicabo culpa necessitatibus, sint sequi ducimus ipsam?</p>
+                        <a href="#">LearnMore</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-computer"></i>
+                        <h2>POS System Development</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil adipisci consequuntur voluptate pariatur explicabo culpa necessitatibus, sint sequi ducimus ipsam?</p>
+                        <a href="#">LearnMore</a>
+                    </div>
+                    
+                </div>           
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove('active-link');
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+
+
+    </script>
+</body>
+</html>
